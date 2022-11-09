@@ -34,16 +34,17 @@ else {
      for( $i=0 ; $i < $total ; $i++ ) {
 
                $tmpFilePath = $_FILES['fileToUpload']['tmp_name'][$i];
+                echo "files".$tmpFilePath;
 
                if ($tmpFilePath != ""){
                          $newFilePath = "uploads/" . $_FILES['fileToUpload']['tmp_name'][$i];
+                          echo "files".$newFilePath;
+
                          if(move_uploaded_file($tmpFilePath, $newFilePath)) {
-                                           echo "The file ". htmlspecialchars( basename( $_FILES['fileToUpload']['tmp_name'][$i])). " has been uploaded.";
-                                             }
-                                      else
-                                      { echo "Sorry, there was an error uploading your file."; }
+                                           echo "The file ". htmlspecialchars( basename( $_FILES['fileToUpload']['tmp_name'][$i])). " has been uploaded.";}
+                        else { echo "Sorry, there was an error uploading your file."; }
                                       }
-      }
-                }
+                                      }
+    }
 
 ?>
