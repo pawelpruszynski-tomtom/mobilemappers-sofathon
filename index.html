@@ -23,19 +23,77 @@
 			max-width: 100%;
 			max-height: 100%;
 		}
+
+		{
+        box-sizing: border-box;
+    	}
+
+			.column {
+			float: left;
+			}
+
+
+			.left {
+			width: 15%;
+			color: #FFFFFF;
+			background-image: url("1600_700710683673.png");
+			background-color: #DF1B12;
+			}
+
+			.middle {
+			width: 20%;
+				color: #FFFFFF;
+			 }
+
+			 .right {
+			 width: 65%;
+			 }
+
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+
+			.button {
+  			background-color: #00A65E;
+  			border: none;
+  			color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 16px;
+ 		 	margin: 4px 2px;
+  			cursor: pointer;
+}
 	</style>
 
 	
 </head>
 <body>
 
-<form action="/action_page.php">
-  <input type="file" id="myFile" name="filename">
-  <input type="submit">
-</form>
-<p> </p>
-<p> </p>
-<div id="map" style="width: 1080px; height: 900px;"></div>
+<div class="header">
+  <img src="1600_788261670403_2.png" alt="logo" />
+</div>
+<div class="row">
+        <div class="column left"  >
+				<p style="background-color:#DF1B12;"></p>
+				<p>Data</p>
+		</div>
+        <div class="column middle" style="background-color:#00AAFF;">
+            <form action="/action_page.php">
+				<p><input type="file" id="myFile" name="filename" class="button"></p>
+				<p><input type="submit" class="button"></p>
+			</form>
+        </div>
+        <div class="column right">
+			<div id="map" style="width: 1080px; height: 900px;"></div>
+        </div>
+    </div>
+
+
+
 <script>
 
 	const map = L.map('map').setView([51.75941493799874, 19.448758221409435], 15);
