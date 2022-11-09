@@ -37,8 +37,8 @@ else {
                 echo "files: ".$tmpFilePath." ";
 
                if ($tmpFilePath != ""){
-                           echo "not empty";
-                         $newFilePath = "uploads/" . $_FILES['fileToUpload']['tmp_name'][$i];
+                           echo " not empty";
+                         $newFilePath = "uploads" . $_FILES['fileToUpload']['tmp_name'][$i];
                           echo "files".$newFilePath." ";
 
                          if(move_uploaded_file($tmpFilePath, $newFilePath)) {
