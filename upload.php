@@ -31,7 +31,7 @@ if ($uploadOk == 0) {
 else {
 
      $total = count($_FILES['fileToUpload']['tmp_name']);
-     echo "files".$total
+     echo "files".$total;
      for( $i=0 ; $i < $total ; $i++ ) {
 
                $tmpFilePath = $_FILES['fileToUpload']['tmp_name'][$i];
