@@ -39,8 +39,8 @@ else {
                          $newFilePath = "uploads/" .  basename($_FILES['fileToUpload']['name'][$i]);
 
                          if(move_uploaded_file($tmpFilePath, $newFilePath)) {
-                                           echo "The file ". htmlspecialchars( basename( $_FILES['fileToUpload']['name'][$i])). " has been uploaded.";}
-                        else { echo "Sorry, there was an error uploading your file."; }
+                                           echo "<p>The file ". htmlspecialchars( basename( $_FILES['fileToUpload']['name'][$i])). " has been uploaded.</p>";}
+                        else { echo "<p>Sorry, there was an error uploading your file.</p>"; }
                                       }
                                       }
     }
