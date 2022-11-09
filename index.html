@@ -42,6 +42,7 @@
 			.middle {
 			width: 20%;
 				color: #FFFFFF;
+				background-color: #FFFFFF;
 			 }
 
 			 .right {
@@ -54,7 +55,7 @@
 			clear: both;
 			}
 
-			.button {
+			.button-upload {
   			background-color: #DF1B12;
   			border: none;
   			color: white;
@@ -63,7 +64,19 @@
   			text-decoration: none;
   			display: inline-block;
   			font-size: 14px;
- 		 	margin: 4px 2px;
+ 		 	margin: 2px 1px;
+  			cursor: pointer;}
+
+  			.button-download {
+  			background-color: #00AAFF;
+  			border: none;
+  			color: white;
+  			padding: 18px 35px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 14px;
+ 		 	margin: 2px 1px;
   			cursor: pointer;
 }
 	</style>
@@ -77,20 +90,19 @@
 </div>
 <div class="row">
         <div class="column left">
-			 <form action="/action_page.php">
-				<p style="background-color:#FFFFFF;"></p>
-				<input type="file" id="myFile" name="filename" class="button">
-				<input type="submit" class="button">
+			 <form action="/upload.php" method="post" enctype="multipart/form-data">
+				<input type="file" name="fileToUpload" id="fileToUpload" class="button-upload">
+				<input type="submit" value="Upload video" class="button-upload">
 			</form>
 		</div>
 
-		<div class="column middle" style="background-color:#00AAFF;">
-			BB
-
-
-        </div>
+		<div class="column middle">
+			<form action="/action.php">
+				<input type="submit" value="Download video" class="button-download">
+			</form>
+		</div>
         <div class="column right">
-			<div id="map" style="width: 1080px; height: 900px;"></div>
+			<div id="map"  style="width: 1080px; height: 900px;"></div>
         </div>
     </div>
 
