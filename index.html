@@ -117,7 +117,7 @@
 	}).addTo(map);
 
 	const marker = L.marker([51.75941493799874, 19.448758221409435]).addTo(map)
-		.bindPopup('<b>Hello world!</b><br />TT office.').openPopup();
+		.bindPopup('<b>TT office.</b>').openPopup();
 
 	const circle = L.circle([51.75941493799874, 19.448758221409435], {
 		color: 'red',
@@ -130,7 +130,7 @@
 		[51.75951493799874, 19.448758221409435],
 		[51.75941493799874, 19.448958221409435],
 		[51.75931493799874, 19.448758221409435]
-	]).addTo(map).bindPopup('I am a polygon.');
+	]).addTo(map).bindPopup('Polygon.');
 
 
 	const popup = L.popup()
