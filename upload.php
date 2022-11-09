@@ -30,16 +30,13 @@ if ($uploadOk == 0) {
 else {
 
      $total = count($_FILES['fileToUpload']['name']);
-     echo "<p>Total files".$total."</p>";
+     echo "<p>Total files: ".$total."</p>";
      for( $i=0 ; $i < $total ; $i++ ) {
-               echo "<p>Loop".$i."  </p>";
-               $tmpFilePath = $_FILES['fileToUpload']['tmp_name'][$i];
-                echo "files: ".$tmpFilePath." ";
 
+               $tmpFilePath = $_FILES['fileToUpload']['tmp_name'][$i];
                if ($tmpFilePath != ""){
-                           echo " not empty ";
+                         echo "<p>File".$i."  </p>";
                          $newFilePath = "uploads/" .  basename($_FILES['fileToUpload']['name'][$i]);
-                          echo "New file ".$newFilePath." ";
 
                          if(move_uploaded_file($tmpFilePath, $newFilePath)) {
                                            echo "The file ". htmlspecialchars( basename( $_FILES['fileToUpload']['name'][$i])). " has been uploaded.";}
