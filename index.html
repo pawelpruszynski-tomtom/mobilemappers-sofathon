@@ -34,10 +34,9 @@
 
 
 			.left {
-			width: 15%;
+			width: 20%;
 			color: #FFFFFF;
-			background-image: url("1600_700710683673.png");
-			background-color: #DF1B12;
+			background-color: #FFFFFF;
 			}
 
 			.middle {
@@ -46,7 +45,7 @@
 			 }
 
 			 .right {
-			 width: 65%;
+			 width: 60%;
 			 }
 
 			.row:after {
@@ -56,14 +55,14 @@
 			}
 
 			.button {
-  			background-color: #00A65E;
+  			background-color: #DF1B12;
   			border: none;
   			color: white;
   			padding: 15px 32px;
   			text-align: center;
   			text-decoration: none;
   			display: inline-block;
-  			font-size: 16px;
+  			font-size: 14px;
  		 	margin: 4px 2px;
   			cursor: pointer;
 }
@@ -77,15 +76,18 @@
   <img src="1600_788261670403_2.png" alt="logo" />
 </div>
 <div class="row">
-        <div class="column left"  >
-				<p style="background-color:#DF1B12;"></p>
-				<p>Data</p>
-		</div>
-        <div class="column middle" style="background-color:#00AAFF;">
-            <form action="/action_page.php">
-				<p><input type="file" id="myFile" name="filename" class="button"></p>
-				<p><input type="submit" class="button"></p>
+        <div class="column left">
+			 <form action="/action_page.php">
+				<p style="background-color:#FFFFFF;"></p>
+				<input type="file" id="myFile" name="filename" class="button">
+				<input type="submit" class="button">
 			</form>
+		</div>
+
+		<div class="column middle" style="background-color:#00AAFF;">
+			BB
+
+
         </div>
         <div class="column right">
 			<div id="map" style="width: 1080px; height: 900px;"></div>
