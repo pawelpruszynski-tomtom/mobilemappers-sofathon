@@ -103,10 +103,7 @@
 		</div>
 
 		<div class="column middle">
-			<?php
-				$xml=simplexml_load_file("top_contributors.xml") or die("Error: Cannot create object");
-				foreach($xml->children() as $contributors) { echo $contributors->author . ", ";  echo contributors->numberofvideos . "<br>"; }
-			?>
+
 		</div>
         <div class="column right">
 			<div id="map"  style="width: 1080px; height: 900px;"></div>
