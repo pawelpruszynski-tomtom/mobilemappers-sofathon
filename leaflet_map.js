@@ -13,7 +13,7 @@ const map = L.map('map').setView([45.681813, 8.703082], 17);
         },
         "geometry": {
         "type": "Point",
-        "coordinates": [8.703418, 45.681813]
+        "coordinates": [8.708564, 45.679605]
         }
         };
 
