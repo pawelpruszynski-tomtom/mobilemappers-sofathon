@@ -11,7 +11,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-    <script src="leaflet_map.js"> </script>
+
+
 
 
 	<style>
@@ -81,8 +82,8 @@
  		 	margin: 2px 1px;
   			cursor: pointer;
                             }
-            table {
-                border: 2px solid;
+            table, tr {
+                border: 1px solid;
                 border-color: #DF1B12;
                 width: 100%;
                 border-collapse: collapse;
@@ -140,9 +141,20 @@
         </div>
 </div>
 
+<script src="leaflet_map.js"> </script>
 
 
-
+<script>
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'FILE221005-051515F.geojson');
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.responseType = 'json';
+xhr.onload = function() {
+    if (xhr.status !== 200) return
+    L.geoJSON(xhr.response).addTo(map);
+};
+xhr.send();
+</script>
 
 
 </body>
