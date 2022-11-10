@@ -105,7 +105,7 @@
 		<div class="column middle">
 			<?php
 				$xml=simplexml_load_file("top_contributors.xml") or die("Error: Cannot create object");
-				foreach($xml->children() as $contributors) { echo $contributors->author . ", ";  echo contributors->numberofvideos . "<br>"; }
+				foreach($xml->children() as $contributors) { echo "Author" $contributors->author . ", ";  echo $contributors->numberofvideos . "<br>"; }
 			?>
 		</div>
         <div class="column right">
