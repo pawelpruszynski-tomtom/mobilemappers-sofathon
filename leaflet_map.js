@@ -26,6 +26,20 @@ const map = L.map('map').setView([51.75941493799874, 19.448758221409435], 15);
 		.setContent('TT office.')
 		.openOn(map);
 
+    var geojsonFeature = {
+        "type": "Feature",
+        "properties": {
+        "name": "TT gepjeosn",
+        "amenity": "TT office",
+        "popupContent": "This TT office json!"
+        },
+        "geometry": {
+        "type": "Point",
+        "coordinates": [51.75941493799874, 19.448758221409435]
+        }
+        };
+    L.geoJSON(geojsonFeature).addTo(map);
+
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
