@@ -41,7 +41,7 @@
 
 			.middle {
 			width: 20%;
-				color: #DF1B12;
+				color: #000000;
 				background-color: #FFFFFF;
 			 }
 
@@ -78,7 +78,16 @@
   			font-size: 14px;
  		 	margin: 2px 1px;
   			cursor: pointer;
-}
+                            }
+            table {
+                border-color: #DF1B12;
+                border: 2px solid;
+                width: 100%;
+                border-collapse: collapse;
+                }
+
+
+
 	</style>
 
 
