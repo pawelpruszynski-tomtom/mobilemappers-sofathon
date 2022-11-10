@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="leaflet_map.js"> </script>
+
 
 	<style>
 		html, body {
@@ -80,8 +82,8 @@
   			cursor: pointer;
                             }
             table {
-                border-color: #DF1B12;
                 border: 2px solid;
+                border-color: #DF1B12;
                 width: 100%;
                 border-collapse: collapse;
                 }
@@ -140,46 +142,6 @@
 
 
 
-<script>
-
-	const map = L.map('map').setView([51.75941493799874, 19.448758221409435], 15);
-
-	const tiles = L.tileLayer('http://wmsmapproxy.ttg.global/mapproxy/basemap/wmts/Sydney/webmercator/{z}/{x}/{y}.png', {
-		maxZoom: 18
-	}).addTo(map);
-
-	const marker = L.marker([51.75941493799874, 19.448758221409435]).addTo(map)
-		.bindPopup('<b>TT office.</b>').openPopup();
-
-	const circle = L.circle([51.75941493799874, 19.448758221409435], {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5,
-		radius: 50
-	}).addTo(map).bindPopup('Circle.');
-
-	const polygon = L.polygon([
-		[51.75951493799874, 19.448758221409435],
-		[51.75941493799874, 19.448958221409435],
-		[51.75931493799874, 19.448758221409435]
-	]).addTo(map).bindPopup('Polygon.');
-
-
-	const popup = L.popup()
-		.setLatLng([51.75941493799874, 19.448758221409435])
-		.setContent('TT office.')
-		.openOn(map);
-
-	function onMapClick(e) {
-		popup
-			.setLatLng(e.latlng)
-			.setContent(`You clicked the map at ${e.latlng.toString()}`)
-			.openOn(map);
-	}
-
-	map.on('click', onMapClick);
-
-</script>
 
 
 
