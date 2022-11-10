@@ -115,8 +115,8 @@
                                     $xml=simplexml_load_file("top_contributors.xml") or die("Error: Cannot create object");
                                     foreach($xml->children() as $contributors)
                                     {
-                                    echo "<td>". $contributors->author . "</td> ";
-                                    echo "<td>".  $contributors->numberofvideos . "</td> "; }
+                                    echo "<tr><td>". $contributors->author . "</td> ";
+                                    echo "<td>".  $contributors->numberofvideos . "</td> </tr>"; }
                                 ?>
            </tr><table>
 		</div>
