@@ -90,17 +90,17 @@
 </div>
 <div class="row">
         <div class="column left">
-			<div>
+
 			    <form action="/upload.php" method="post" enctype="multipart/form-data">
 				    <input type="file" name="fileToUpload[]" id="fileToUpload" multiple="multiple" class="button-upload">
 				    <input type="submit" value="Upload video" class="button-upload">
 			    </form>
-			</div>
-			<div>
-			<form action="/download.php">
-				<input type="submit" value="Download video" class="button-download">
-			</form>
-			</div>
+
+
+			    <form action="/download.php">
+				    <input type="submit" value="Download video" class="button-download">
+			    </form>
+
 		</div>
 
 		<div class="column middle">
@@ -118,12 +118,12 @@
                                     echo "<tr><td>". $contributors->author . "</td> ";
                                     echo "<td>".  $contributors->numberofvideos . "</td> </tr>"; }
                                 ?>
-           </tr><table>
+           </tr></table>
 		</div>
         <div class="column right">
 			<div id="map"  style="width: 1080px; height: 900px;"></div>
         </div>
-    </div>
+</div>
 
 
 
