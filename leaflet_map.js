@@ -1,4 +1,4 @@
-const map = L.map('map').setView([45.681938, 8.703082], 17);
+const map = L.map('map').setView([45.681813, 8.703082], 17);
 
 	const tiles = L.tileLayer('http://wmsmapproxy.ttg.global/mapproxy/basemap/wmts/Sydney/webmercator/{z}/{x}/{y}.png', {
 		maxZoom: 18
@@ -13,7 +13,7 @@ const map = L.map('map').setView([45.681938, 8.703082], 17);
         },
         "geometry": {
         "type": "Point",
-        "coordinates": [19.4487582214, 51.75941]
+        "coordinates": [8.703418, 45.681813]
         }
         };
 
