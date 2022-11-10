@@ -90,16 +90,17 @@
 </div>
 <div class="row">
         <div class="column left">
-			<p> <form action="/upload.php" method="post" enctype="multipart/form-data">
-				<input type="file" name="fileToUpload[]" id="fileToUpload" multiple="multiple" class="button-upload">
-				<input type="submit" value="Upload video" class="button-upload">
-			</form>
-			</p>
-			<p>
+			<div>
+			    <form action="/upload.php" method="post" enctype="multipart/form-data">
+				    <input type="file" name="fileToUpload[]" id="fileToUpload" multiple="multiple" class="button-upload">
+				    <input type="submit" value="Upload video" class="button-upload">
+			    </form>
+			</div>
+			<div>
 			<form action="/download.php">
 				<input type="submit" value="Download video" class="button-download">
 			</form>
-			</p>
+			</div>
 		</div>
 
 		<div class="column middle">
