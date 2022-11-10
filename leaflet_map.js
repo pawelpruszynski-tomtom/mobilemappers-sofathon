@@ -29,7 +29,7 @@ const map = L.map('map').setView([51.75941493799874, 19.448758221409435], 15);
     var geojsonFeature = {
         "type": "Feature",
         "properties": {
-        "name": "TT gepjeosn",
+        "name": "TT geojson",
         "amenity": "TT office",
         "popupContent": "This TT office json!"
         },
