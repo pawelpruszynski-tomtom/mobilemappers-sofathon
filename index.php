@@ -118,7 +118,7 @@
                                     echo "<td>". $contributors->author . "</td> ";
                                     echo "<td>".  $contributors->numberofvideos . "</td> "; }
                                 ?>
-           </tr><table>"
+           </tr><table>
 		</div>
         <div class="column right">
 			<div id="map"  style="width: 1080px; height: 900px;"></div>
