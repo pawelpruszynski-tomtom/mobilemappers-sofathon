@@ -110,7 +110,7 @@
                                    <th>Author</th>
                                    <th>Videos</th>
                             </tr>
-                            <tr>"
+                            <tr>
                                 <?php
                                     $xml=simplexml_load_file("top_contributors.xml") or die("Error: Cannot create object");
                                     foreach($xml->children() as $contributors)
